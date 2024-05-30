@@ -10,13 +10,14 @@ const data = {
 function updateTable() {
     const businessType = document.getElementById("businessType").value;
     const squareFootage = parseFloat(document.getElementById("squareFootage").value) / 1000000;
+    const numBuildings = parseFloat(document.getElementById("numBuildings").value);
     
     const currentData = data[businessType];
     
-    const currentWater = currentData.water * squareFootage;
-    const currentEnergy = currentData.energy * squareFootage;
-    const currentCO2 = currentData.co2 * squareFootage;
-    const currentOPEX = currentData.opex * squareFootage;
+    const currentWater = currentData.water * squareFootage * numBuildings;
+    const currentEnergy = currentData.energy * squareFootage * numBuildings;
+    const currentCO2 = currentData.co2 * squareFootage * numBuildings;
+    const currentOPEX = currentData.opex * squareFootage * numBuildings;
     
     const aquanomixWater = currentWater * 0.89; // Assuming an 11% reduction
     const aquanomixEnergy = currentEnergy * 0.97; // Assuming a 3% reduction

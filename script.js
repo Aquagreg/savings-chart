@@ -1,10 +1,10 @@
 const data = {
-    "Hospital": { water: 55.7, energy: 27.5, co2: 3200, opex: 1.5 },
-    "Hospitality": { water: 52, energy: 25, co2: 3100, opex: 1.5 },
-    "Medical Office": { water: 23.4, energy: 18, co2: 3000, opex: 1.5 },
-    "Business Office": { water: 14.4, energy: 15.9, co2: 2900, opex: 1.5 },
-    "Educational": { water: 13.4, energy: 13, co2: 2800, opex: 1.5 },
-    "Laboratory": { water: 72, energy: 35, co2: 3500, opex: 1.5 }
+    "Hospital": { water: 17.8, energy: 27.5, co2: 3200, opex: 1.5 },
+    "Hospitality": { water: 20.8, energy: 25, co2: 3100, opex: 1.5 },
+    "Medical Office": { water: 9.7, energy: 18, co2: 3000, opex: 1.5 },
+    "Business Office": { water: 11.8, energy: 15.9, co2: 2900, opex: 1.5 },
+    "Educational": { water: 9.9, energy: 13, co2: 2800, opex: 1.5 },
+    "Laboratory": { water: 22.1, energy: 35, co2: 3500, opex: 1.5 }
 };
 
 function updateTable() {

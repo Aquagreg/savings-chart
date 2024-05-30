@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Aquanomix Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aquanomix Table Visualization</h1>
+        <label for="businessType">Industry Type:</label>
+        <select id="businessType" onchange="updateTable()">
+            <option value="Hospital">Hospital</option>
+            <option value="Hospitality">Hospitality</option>
+            <option value="Medical Office">Medical Office</option>
+            <option value="Business Office">Business Office</option>
+            <option value="Educational">Educational</option>
+            <option value="Laboratory">Laboratory</option>
+        </select>
+
+        <label for="squareFootage">Average Square Footage:</label>
+        <input type="number" id="squareFootage" value="1000000" onchange="updateTable()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>1MM Square Feet SF</th>
+                    <th>Gallons H2O</th>
+                    <th>Kw/H</th>
+                    <th>CO2</th>
+                    <th>OPEX</th>
+                    <th>CAPEX</th>
+                    <th>Disease Risk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Current State</td>
+                    <td class="brown" id="currentWater">27 MM</td>
+                    <td class="brown" id="currentEnergy">9.7 MM</td>
+                    <td class="brown" id="currentCO2">3200 tons</td>
+                    <td class="brown" id="currentOPEX">$1.5 MM</td>
+                    <td class="brown" id="currentCAPEX">8 years</td>
+                    <td class="brown">▲</td>
+                </tr>
+                <tr>
+                    <td>With Aquanomix</td>
+                    <td class="blue" id="aquanomixWater">24 MM</td>
+                    <td class="blue" id="aquanomixEnergy">9.4 MM</td>
+                    <td class="blue" id="aquanomixCO2">3100 tons</td>
+                    <td class="blue" id="aquanomixOPEX">$1.4 MM</td>
+                    <td class="blue" id="aquanomixCAPEX">10 years</td>
+                    <td class="blue">▼</td>
+                </tr>
+                <tr>
+                    <td>Net Benefit</td>
+                    <td class="green" id="benefitWater">3 MM</td>
+                    <td class="green" id="benefitEnergy">300K Kw/H</td>
+                    <td class="green" id="benefitCO2">100 tons</td>
+                    <td class="green" id="benefitOPEX">$75 K</td>
+                    <td class="green" id="benefitCAPEX">$130 K</td>
+                    <td class="green">▼</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

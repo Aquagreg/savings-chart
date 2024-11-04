@@ -40,7 +40,7 @@ function updateTable() {
     document.getElementById('aquanomixOPEX').textContent = `$${aquanomixOPEX.toFixed(2)} MM`;
     
     document.getElementById('benefitWater').textContent = `${benefitWater.toFixed(2)} MM`;
-    document.getElementById('benefitEnergy').textContent = `${(benefitEnergy * 1000).toFixed(2)} K Kw/H`;
+    document.getElementById('benefitEnergy').textContent = `${(benefitEnergy * 1000).toFixed(2)} K KwH`;
     document.getElementById('benefitCO2').textContent = `${benefitCO2.toFixed(2)} tons`;
     document.getElementById('benefitOPEX').textContent = `$${benefitOPEX.toFixed(2)} MM`;
 }

@@ -4,7 +4,8 @@ const data = {
     "Medical Office": { water: 9.7, energy: 18, co2: 3000, opex: 1.5 },
     "Business Office": { water: 11.8, energy: 15.9, co2: 2900, opex: 1.5 },
     "Educational": { water: 9.9, energy: 13, co2: 2800, opex: 1.5 },
-    "Laboratory": { water: 22.1, energy: 35, co2: 3500, opex: 1.5 }
+    "Laboratory": { water: 22.1, energy: 35, co2: 3500, opex: 1.5 },
+    "Industrial": { water: 20, energy: 95, co2: 3500, opex: 1.5 }
 };
 
 function updateTable() {
@@ -16,7 +17,7 @@ function updateTable() {
     
     const currentWater = currentData.water * squareFootage * numBuildings;
     const currentEnergy = currentData.energy * squareFootage * numBuildings;
-    const currentCO2 = currentData.co2 * squareFootage * numBuildings;
+    const currentCO2 = currentData.co2/2000 * squareFootage * numBuildings;
     const currentOPEX = currentData.opex * squareFootage * numBuildings;
     
     const aquanomixWater = currentWater * 0.89; // Assuming an 11% reduction
